@@ -12,6 +12,8 @@ name: Update bucket
 jobs:
   update:
     name: ♻ Update manifests
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
     steps:
       - name: ⬇ Checkout repo
