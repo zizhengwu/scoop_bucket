@@ -4,7 +4,7 @@
     "homepage": "https://github.com/soulsmods/DSMapStudio",
     "license": "GPL-3.0",
     "url": "https://github.com/soulsmods/DSMapStudio/releases/download/release-1.10/DSMapStudio-1.10.zip",
-    "hash": "sha256:YOUR_SHA256_HASH_HERE",
+    "hash": "a9f4d55886314c0ab221c598a949fd31e924b2115c194c3994dbde6cca5b5c59",
     "bin": "DSMapStudio.exe",
     "shortcuts": [
         [
