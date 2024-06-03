@@ -3,7 +3,7 @@
     "description": "A modding tool for the Dark Souls series.",
     "homepage": "https://github.com/soulsmods/DSMapStudio",
     "license": "GPL-3.0",
-    "url": "https://github.com/soulsmods/DSMapStudio/releases/download/v1.10/DSMapStudio-1.10.zip",
+    "url": "https://github.com/soulsmods/DSMapStudio/releases/download/release-1.10/DSMapStudio-1.10.zip",
     "hash": "sha256:YOUR_SHA256_HASH_HERE",
     "bin": "DSMapStudio.exe",
     "shortcuts": [
@@ -16,7 +16,7 @@
         "github": "https://github.com/soulsmods/DSMapStudio"
     },
     "autoupdate": {
-        "url": "https://github.com/soulsmods/DSMapStudio/releases/download/v$version/DSMapStudio-$version.zip",
+        "url": "https://github.com/soulsmods/DSMapStudio/releases/download/release-$version/DSMapStudio-$version.zip",
         "hash": {
             "url": "$url.sha256"
         }
