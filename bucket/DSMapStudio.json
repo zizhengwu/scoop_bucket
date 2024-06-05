@@ -13,7 +13,8 @@
         ]
     ],
     "checkver": {
-        "github": "https://github.com/soulsmods/DSMapStudio"
+        "github": "https://github.com/soulsmods/DSMapStudio",
+        "regex": "DSMapStudio-([\\d.]+)\\.zip"
     },
     "autoupdate": {
         "url": "https://github.com/soulsmods/DSMapStudio/releases/download/release-$version/DSMapStudio-$version.zip",
