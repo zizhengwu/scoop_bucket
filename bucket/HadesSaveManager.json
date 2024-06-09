@@ -5,7 +5,6 @@
     "license": "MIT",
     "url": "https://github.com/Museus/HadesSaveManager/releases/download/v1.3.0/HadesSaveManager_v1.3.0.zip",
     "hash": "c2c4a61e9130a7cf911c42c06e84e75f08abdf84c54a78b66d8ca8b220fff0ac",
-    "extract_dir": "HadesSaveManager",
     "bin": "HadesSaveManager.exe",
     "checkver": {
         "github": "https://github.com/Museus/HadesSaveManager",
