@@ -1,11 +1,9 @@
 {
     "version": "4.0.1.0",
-    "url": "",
-    "hash": "",
     "extract_dir": "crx",
     "architecture": {
         "64bit": {
-            "url": "",
+            "url": "https://gitflic.ru/project/magnolia1234/bpc_uploads/blob/raw?file=bypass-paywalls-chrome-clean-master.zip",
             "hash": "a9f83c182a366d6218748fb04634f6daacd9e9e56e560facc22bae44f49d595e",
             "extract_to": "crx"
         }
