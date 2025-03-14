@@ -9,6 +9,9 @@
             "hash": "7844f45e39853e8bb838fcdcd2d603142d043d57c92b24bd2e6e0832376b893f"
         }
     },
+    "persist": [
+        "itgmania\\Save"
+    ],
     "bin": "itgmania\\Program\\ITGmania.exe",
     "shortcuts": [
         [
