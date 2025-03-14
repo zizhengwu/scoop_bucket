@@ -9,10 +9,10 @@
             "hash": "7844f45e39853e8bb838fcdcd2d603142d043d57c92b24bd2e6e0832376b893f"
         }
     },
-    "bin": "ITGmania.exe",
+    "bin": "Program\\ITGmania.exe",
     "shortcuts": [
         [
-            "ITGmania.exe",
+            "Program\\ITGmania.exe",
             "ITGmania"
         ]
     ],
