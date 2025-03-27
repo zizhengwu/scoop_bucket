@@ -1,17 +1,15 @@
 {
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "ITGmania is a community-driven rhythm game and fork of StepMania",
     "homepage": "https://github.com/itgmania/itgmania",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/itgmania/itgmania/releases/download/v1.0.0/ITGmania-1.0.0-portable.zip",
-            "hash": "7844f45e39853e8bb838fcdcd2d603142d043d57c92b24bd2e6e0832376b893f"
+            "url": "https://github.com/itgmania/itgmania/releases/download/v1.0.1/ITGmania-1.0.1-portable.zip",
+            "hash": "fab0c5cd7728b90852898b913355cef6284f5e7edfb02decf522841e1d73481f"
         }
     },
-    "persist": [
-        "itgmania\\Save"
-    ],
+    "persist": "itgmania\\Save",
     "bin": "itgmania\\Program\\ITGmania.exe",
     "shortcuts": [
         [
