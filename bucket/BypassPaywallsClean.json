@@ -6,8 +6,9 @@
             "url": "https://gitflic.ru/project/magnolia1234/bpc_uploads/blob/raw?file=bypass-paywalls-chrome-clean-master.zip&inline=false",
             "hash": "a8ce76e47c52bcf7b2554da33217df235da52bdb5241f4da77d4bf73076f5af4",
             "pre_install": [
-                "Expand-Archive -Path $dlf -DestinationPath \"$dir\" -Force",
-                "Remove-Item $dlf -Force"
+                "Rename-Item \"$dir\\raw\" \"bpc.zip\"",
+                "Expand-Archive -Path \"$dir\\bpc.zip\" -DestinationPath \"$dir\"",
+                "Remove-Item \"$dir\\bpc.zip\""
             ]
         }
     },
