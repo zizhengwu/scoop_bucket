@@ -8,7 +8,6 @@
             "hash": "4d097b229b7054e790868cc8663bfcb00782f06f33b8d487511c6fd46e715484"
         }
     },
-    "extract_dir": "ngx_dlss_demo_windows",
     "checkver": {
         "github": "https://github.com/NVIDIA/DLSS",
         "regex": "tag/v([\\d.]+)"
