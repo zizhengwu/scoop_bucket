@@ -27,6 +27,10 @@
             "Eden"
         ]
     ],
+    "persist": [
+        "user",
+        "plugins"
+    ],
     "checkver": {
         "url": "https://api.github.com/repos/eden-emulator/Releases/releases/latest",
         "jsonpath": "$.tag_name",
