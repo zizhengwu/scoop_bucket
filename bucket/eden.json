@@ -38,7 +38,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/eden-emulator/Releases/releases/download/v$version/Eden-Windows-v$version-amd64.zip"
+                "url": "https://github.com/eden-emulator/Releases/releases/download/v$version/Eden-Windows-v$version-amd64-msvc-standard.zip"
             }
         }
     }
