@@ -1,10 +1,10 @@
 {
-    "version": "20.0.14.0.202602270056",
+    "version": "20.0.14.0.202602270701",
     "description": "Kaspersky's Virus Removal Tool. Scan and disinfect an infected computer from viruses and other types of malicious programs.",
     "homepage": "https://support.kaspersky.com/15674",
     "license": "Freeware",
     "url": "https://devbuilds.s.kaspersky-labs.com/devbuilds/KVRT/latest/full/KVRT.exe",
-    "hash": "04ea5662306cbec04bcb55883018c16a1cef10f0a3e41727ae023aefb44e2cf3",
+    "hash": "e54a5aa643636c8eca1aa1954a8700359d22589670c71ed19cbfc257fee2be23",
     "bin": "KVRT.exe",
     "shortcuts": [
         [
