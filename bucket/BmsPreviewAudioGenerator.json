@@ -14,6 +14,6 @@
         "github": "https://github.com/MikiraSora/BmsPreviewAudioGenerator"
     },
     "autoupdate": {
-        "url": "https://github.com/MikiraSora/BmsPreviewAudioGenerator/releases/download/v$version/BmsPreviewAudioGenerator$version.zip"
+        "url": "https://github.com/MikiraSora/BmsPreviewAudioGenerator/releases/download/v$version/BmsPreviewAudioGenerator.exe"
     }
 }

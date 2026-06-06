@@ -33,17 +33,5 @@
     "persist": [
         "user",
         "plugins"
-    ],
-    "checkver": {
-        "url": "https://api.github.com/repos/emuplace/sudachi.emuplace.app/releases",
-        "jsonpath": "$[?(@.assets[?(@.name =~ /.*windows.*/i)])].tag_name",
-        "regex": "v(?<version>[\\d.]+)"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/emuplace/sudachi.emuplace.app/releases/download/v$version/sudachi-windows-v$version.7z"
-            }
-        }
-    }
+    ]
 }

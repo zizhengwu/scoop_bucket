@@ -14,7 +14,7 @@
         ]
     ],
     "checkver": {
-        "url": "https://devbuilds.s.kaspersky-labs.com/devbuilds/KVRT/latest/full/kvrt.xml",
+        "script": "(Invoke-WebRequest 'https://devbuilds.s.kaspersky-labs.com/devbuilds/KVRT/latest/full/kvrt.xml' -Headers @{ 'User-Agent' = 'Mozilla/5.0' } -UseBasicParsing).Content",
         "regex": "version = \"([\\d.]+)\"\\r?\\n\\s{4}databases_timestamp = \"([\\d]+)\"",
         "replace": "${1}.${2}"
     },
