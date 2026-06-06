@@ -1,11 +1,11 @@
 {
-    "version": "0.2.0-rc1",
+    "version": "0.2.1",
     "description": "Eden – Nintendo Switch emulator",
-    "homepage": "https://github.com/eden-emulator/Releases",
+    "homepage": "https://git.eden-emu.dev/eden-emu/eden/",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/eden-emulator/Releases/releases/download/v0.2.0-rc1/Eden-Windows-v0.2.0-rc1-amd64-msvc-standard.zip",
-            "hash": "f5abaad71d9375aba746f7c091eddce3c17d2c062f1d5eeb5449400c793d8cc7"
+            "url": "https://git.eden-emu.dev/eden-emu/eden/releases/download/v0.2.1/Eden-Windows-v0.2.1-amd64-msvc-standard.zip",
+            "hash": "ff498e5da9630216926ac3cbe9fb493b14930665c728a40a8f5b59507fdd7ebf"
         }
     },
     "pre_install": [
@@ -29,5 +29,16 @@
     "persist": [
         "user",
         "plugins"
-    ]
+    ],
+    "checkver": {
+        "url": "https://git.eden-emu.dev/eden-emu/eden/releases",
+        "regex": "/releases/tag/v([\\d.]+(?:-[\\w.]+)?)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://git.eden-emu.dev/eden-emu/eden/releases/download/v$version/Eden-Windows-v$version-amd64-msvc-standard.zip"
+            }
+        }
+    }
 }
