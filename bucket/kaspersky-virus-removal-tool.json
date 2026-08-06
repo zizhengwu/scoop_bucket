@@ -14,9 +14,8 @@
         ]
     ],
     "checkver": {
-        "script": "(Invoke-WebRequest 'https://devbuilds.s.kaspersky-labs.com/devbuilds/KVRT/latest/full/kvrt.xml' -Headers @{ 'User-Agent' = 'Mozilla/5.0' } -UseBasicParsing).Content",
-        "regex": "version = \"([\\d.]+)\"\\r?\\n\\s{4}databases_timestamp = \"([\\d]+)\"",
-        "replace": "${1}.${2}"
+        "script": "$urls = @('https://devbuilds.s.kaspersky-labs.com/devbuilds/KVRT/latest/full/kvrt.xml', 'https://devbuilds.kaspersky-labs.com/devbuilds/KVRT/latest/full/kvrt.xml'); $errors = @(); foreach ($url in $urls) { for ($attempt = 1; $attempt -le 3; $attempt++) { try { $content = (Invoke-WebRequest $url -Headers @{ 'User-Agent' = 'Mozilla/5.0' } -UseBasicParsing -TimeoutSec 30 -ErrorAction Stop).Content; if ($content -match 'version = \"([\\d.]+)\"\\r?\\n\\s{4}databases_timestamp = \"([\\d]+)\"') { return \"$($Matches[1]).$($Matches[2])\" }; throw \"Version metadata was not found in $url\" } catch { $errors += \"${url} attempt ${attempt}: $($_.Exception.Message)\"; if ($attempt -lt 3) { Start-Sleep -Seconds (2 * $attempt) } } } }; throw \"Unable to determine the latest KVRT build: $($errors -join '; ')\"",
+        "regex": "^([\\d.]+)$"
     },
     "autoupdate": {
         "url": "https://devbuilds.s.kaspersky-labs.com/devbuilds/KVRT/latest/full/KVRT.exe"
