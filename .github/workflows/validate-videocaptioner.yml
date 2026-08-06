@@ -1,0 +1,25 @@
+name: Validate VideoCaptioner manifest
+
+on:
+  push:
+    branches:
+      - agent/fix-videocaptioner-excavator
+
+permissions:
+  contents: read
+
+jobs:
+  checkver:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run Scoop checkver
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
+          Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
+          $checkver = Join-Path $env:USERPROFILE 'scoop\apps\scoop\current\bin\checkver.ps1'
+          & $checkver 'bucket/VideoCaptioner.json' -Update -ThrowError
+          if ($LASTEXITCODE) { throw "checkver exited with code $LASTEXITCODE" }
+          git diff --exit-code -- bucket/VideoCaptioner.json
