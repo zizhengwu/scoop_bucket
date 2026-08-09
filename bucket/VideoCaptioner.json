@@ -24,7 +24,11 @@
             "VideoCaptioner"
         ]
     ],
-    "checkver": "github",
+    "checkver": {
+        "url": "https://api.github.com/repos/WEIFENG2333/VideoCaptioner/releases?per_page=20",
+        "script": "$releases = $page | ConvertFrom-Json; $release = $releases | Where-Object { $_.assets.name -match '^VideoCaptioner-Setup-win64-v[\\d.]+\\.exe$' } | Select-Object -First 1; if ($release) { $release.tag_name } else { \"v$($json.version)\" }",
+        "regex": "v([\\d.]+)"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
