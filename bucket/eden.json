@@ -4,7 +4,7 @@
     "homepage": "https://git.eden-emu.dev/eden-emu/eden/",
     "architecture": {
         "64bit": {
-            "url": "https://git.eden-emu.dev/eden-emu/eden/releases/download/v0.2.1/Eden-Windows-v0.2.1-amd64-msvc-standard.zip",
+            "url": "https://stable.eden-emu.dev/v0.2.1/Eden-Windows-v0.2.1-amd64-msvc-standard.zip",
             "hash": "ff498e5da9630216926ac3cbe9fb493b14930665c728a40a8f5b59507fdd7ebf"
         }
     },
@@ -31,13 +31,14 @@
         "plugins"
     ],
     "checkver": {
-        "url": "https://git.eden-emu.dev/eden-emu/eden/releases",
-        "regex": "/releases/tag/v([\\d.]+(?:-[\\w.]+)?)"
+        "url": "https://eden-emu.dev/downloads/",
+        "script": "try { (Invoke-RestMethod 'https://git.eden-emu.dev/api/v1/repos/eden-emu/eden/releases?limit=1' -Headers @{ 'User-Agent' = 'Scoop' } -ErrorAction Stop)[0].tag_name } catch { \"v$($json.version)\" }",
+        "regex": "v([\\d.]+(?:-[\\w.]+)?)"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://git.eden-emu.dev/eden-emu/eden/releases/download/v$version/Eden-Windows-v$version-amd64-msvc-standard.zip"
+                "url": "https://stable.eden-emu.dev/v$version/Eden-Windows-v$version-amd64-msvc-standard.zip"
             }
         }
     }
