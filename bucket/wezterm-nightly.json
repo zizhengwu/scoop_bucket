@@ -1,5 +1,5 @@
 {
-    "version": "20261005-042725",
+    "version": "20261006-040544",
     "description": "A GPU-accelerated cross-platform terminal emulator and multiplexer written by @wez and implemented in Rust",
     "homepage": "https://github.com/wez/wezterm",
     "license": {
@@ -20,7 +20,7 @@
         "url": "https://github.com/wez/wezterm/releases/download/nightly/WezTerm-windows-nightly.zip"
     },
     "url": "https://github.com/wez/wezterm/releases/download/nightly/WezTerm-windows-nightly.zip",
-    "hash": "c21c4300ca9e3493c0955f0d3d809a89ff57aeb4c05005ba52011e72230a90ca",
+    "hash": "0982f3cdb5ae1a23db8b1271cdb30f6716aea5254b6255e70d82f49c4200f49f",
     "installer": {
         "script": [
             "$foldername = (Get-Item $dir\\WezTerm-windows-*).Name",
