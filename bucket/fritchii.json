@@ -1,0 +1,38 @@
+{
+    "version": "5.5",
+    "description": "Experimental Nintendo Switch 2 emulator, forked from Lichii",
+    "homepage": "https://github.com/Frizti/Fritchii",
+    "license": "GPL-3.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Frizti/Fritchii/releases/download/fritchii-v5.5/Fritchii-v5.5-Windows-x64.zip",
+            "hash": "63112e7125e6174192079475b485f9633509a4a8dfb2630b5f8a96c644abf066"
+        }
+    },
+    "extract_dir": "Fritchii-v5.5",
+    "bin": [
+        [
+            "lichii.exe",
+            "fritchii"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "lichii.exe",
+            "Fritchii"
+        ]
+    ],
+    "persist": "user",
+    "checkver": {
+        "url": "https://github.com/Frizti/Fritchii/releases.atom",
+        "regex": "/releases/tag/fritchii-v([\\d.]+(?:-[\\w.]+)?)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Frizti/Fritchii/releases/download/fritchii-v$version/Fritchii-v$version-Windows-x64.zip"
+            }
+        },
+        "extract_dir": "Fritchii-v$version"
+    }
+}
