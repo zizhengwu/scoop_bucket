@@ -20,7 +20,8 @@
     "persist": [
         "save",
         "mods",
-        "upscalers"
+        "upscalers",
+        "nup_dump"
     ],
     "checkver": "github",
     "autoupdate": {
