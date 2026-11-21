@@ -1,10 +1,10 @@
 {
-    "version": "20.0.14.0.202611201814",
+    "version": "20.0.14.0.202611211457",
     "description": "Kaspersky's Virus Removal Tool. Scan and disinfect an infected computer from viruses and other types of malicious programs.",
     "homepage": "https://support.kaspersky.com/15674",
     "license": "Freeware",
-    "url": "https://devbuilds.s.kaspersky-labs.com/devbuilds/KVRT/latest/full/KVRT.exe",
-    "hash": "275aaf03324eefeed8254340644e31415ed2e55c059f4d86808af73ddaa37d1b",
+    "url": "https://devbuilds.s.kaspersky-labs.com/kvrt/latest/full/kvrt.exe#/KVRT.exe",
+    "hash": "cea85166f7f6b8e7fe0188cb95434eba934f2b5f28324c86d20d3fad73ff007e",
     "bin": "KVRT.exe",
     "shortcuts": [
         [
@@ -14,11 +14,11 @@
         ]
     ],
     "checkver": {
-        "script": "(Invoke-WebRequest 'https://devbuilds.s.kaspersky-labs.com/devbuilds/KVRT/latest/full/kvrt.xml' -Headers @{ 'User-Agent' = 'Mozilla/5.0' } -UseBasicParsing).Content",
+        "url": "https://devbuilds.s.kaspersky-labs.com/kvrt/latest/full/kvrt.xml",
         "regex": "version = \"([\\d.]+)\"\\r?\\n\\s{4}databases_timestamp = \"([\\d]+)\"",
         "replace": "${1}.${2}"
     },
     "autoupdate": {
-        "url": "https://devbuilds.s.kaspersky-labs.com/devbuilds/KVRT/latest/full/KVRT.exe"
+        "url": "https://devbuilds.s.kaspersky-labs.com/kvrt/latest/full/kvrt.exe#/KVRT.exe"
     }
 }
