@@ -5,8 +5,8 @@
     "license": "Freeware",
     "depends": "gsudo",
     "url": [
-        "https://www.videohelp.com/download/madVR09217.zip",
-        "https://www.videohelp.com/download/madVRhdrMeasure210.zip"
+        "https://download.videohelp.com/madVR09217.zip",
+        "https://madshi.net/madVRhdrMeasure210.zip"
     ],
     "hash": [
         "87e088f7b5de20d0a9065c73015d7fb7c225870380dd3169c70171b77e74bb97",
@@ -42,17 +42,6 @@
         "script": [
             "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
             "sudo \"$dir\\uninstall.bat\""
-        ]
-    },
-    "checkver": {
-        "url": "https://www.videohelp.com/software/madVR",
-        "regex": "(?<prefix>[\\d.]+) / Test Build (?<suffix>[\\d]+[a-z]?)",
-        "replace": "${prefix}-${suffix}"
-    },
-    "autoupdate": {
-        "url": [
-            "https://www.videohelp.com/download/madVR$majorVersion$minorVersion$patchVersion.zip",
-            "https://www.videohelp.com/download/madVRhdrMeasure$matchSuffix.zip"
         ]
     }
 }
